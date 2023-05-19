@@ -1,4 +1,4 @@
-﻿namespace UTube.VideoService.Api;
+﻿namespace VideoService.Api;
 
 public static class DependencyInjection
 {

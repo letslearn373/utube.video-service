@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.InteropServices;
-using UTube.VideoService.Application.Consumers;
-using UTube.VideoService.Infrastructure.Settings;
+using VideoService.Application.Consumers;
+using VideoService.Infrastructure.Settings;
 
-namespace UTube.VideoService.Infrastructure;
+namespace VideoService.Infrastructure;
 
 public static class DependencyInjection
 {

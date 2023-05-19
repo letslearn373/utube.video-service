@@ -1,4 +1,4 @@
-﻿namespace UTube.VideoService.Infrastructure.Settings;
+﻿namespace VideoService.Infrastructure.Settings;
 
 public class RabbitMQSetting
 {

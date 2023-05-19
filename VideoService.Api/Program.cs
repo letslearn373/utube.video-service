@@ -1,4 +1,4 @@
-using UTube.VideoService.Infrastructure;
+using VideoService.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {

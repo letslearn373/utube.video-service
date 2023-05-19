@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using UTube.Common.Events;
 
-namespace UTube.VideoService.Application.Consumers;
+namespace VideoService.Application.Consumers;
 
 public class VideoUploadedEventConsumer : IConsumer<VideoUploadedEvent>
 {

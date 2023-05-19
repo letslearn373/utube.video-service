@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UTube.VideoService.Application\UTube.VideoService.Application.csproj" />
-    <ProjectReference Include="..\UTube.VideoService.Infrastructure\UTube.VideoService.Infrastructure.csproj" />
+    <ProjectReference Include="..\VideoService.Application\VideoService.Application.csproj" />
+    <ProjectReference Include="..\VideoService.Infrastructure\VideoService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
