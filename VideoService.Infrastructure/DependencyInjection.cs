@@ -1,8 +1,12 @@
 ﻿using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Runtime.InteropServices;
+using MongoDB.Driver;
 using VideoService.Application.Consumers;
+using VideoService.Application.Persistance;
+using VideoService.Application.Services;
+using VideoService.Infrastructure.Persistance;
+using VideoService.Infrastructure.Services;
 using VideoService.Infrastructure.Settings;
 
 namespace VideoService.Infrastructure;
@@ -35,6 +39,21 @@ public static class DependencyInjection
         });
 
         #endregion
+
+        #region MongoDB
+
+        var mongoDbsetting = new MongoDbSetting();
+        configuration.GetSection(nameof(MongoDbSetting)).Bind(mongoDbsetting);
+        services.AddSingleton(mongoDbsetting);
+        services.AddSingleton<MongoClient>(_ =>
+        {
+            return new MongoClient(mongoDbsetting.ConnectionString);
+        });
+
+        #endregion
+
+        services.AddTransient<IMongoCollectionFactory, MongoCollectionFactory>();
+        services.AddTransient<IVideoRepository, VideoRepository>();
 
         return services;
     }
