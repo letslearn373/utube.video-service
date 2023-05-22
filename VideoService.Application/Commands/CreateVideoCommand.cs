@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using VideoService.Application.Persistance;
 using VideoService.Domain;
+using VideoService.Domain.DbModels;
 
 namespace VideoService.Application.Commands;
 
